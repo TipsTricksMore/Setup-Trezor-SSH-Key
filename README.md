@@ -163,9 +163,9 @@ ssh someguy-bsd
 
 When connecting you'll be prompted to enter your Trezor PIN and (if set up) your passphrase:
 ![Trezor Logo](static/images/Bildschirmfoto%202024-09-28%20um%2012.59.54.png)
-<img src="static/images/trezor_pin_input.png" width="300" />
-<img src="static/images/trezor_user_data.png" width="300" />
-<img src="static/images/trezor_confirm.png" width="300" />
+<img src="static/images/trezor_pin_input.png" width="200" />
+<img src="static/images/trezor_user_data.png" width="200" />
+<img src="static/images/trezor_confirm.png" width="200" />
 ![Trezor Logo](static/images/Bildschirmfoto%202024-09-28%20um%2013.07.58.png)
 
 
