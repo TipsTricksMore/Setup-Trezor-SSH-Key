@@ -5,6 +5,9 @@
 
 > I did not invent nor do I / have I ever developed Trezor's products. I am not involved in developing trezor-agent or its dependencies. If bad things happen to you as a result of following this article, whether loss of coins, loss of data, or getting locked out of your server(s) - I am not responsible.
 
+> This is basically a copy of a guide from "peakd.com" written by "someguy123". I just experienced some problems with his guide that are fixed in this one. You can find the original guide here: https://peakd.com/security/@someguy123/using-trezor-hardware-wallet-as-a-hardware-ssh-key-on-mac-osx 
+
+
 ## Trezor SSH Authentication Support
 
 This guide covers how to use Trezor’s SSH authentication support with macOS. It allows you to generate an Ed25519 SSH key on your Trezor and use it to log into servers with effective SSH 2FA through authorizing SSH logins using your Trezor screen/buttons.
@@ -29,6 +32,9 @@ brew install trezor-agent
 ```
 
 In case some resources become unavailable in the future, I stored a backup of both in the `/static/libs` folder. (28.09.24)
+
+- libusb - https://github.com/libusb/libusb
+- trezor-agent - https://github.com/romanz/trezor-agent
 
 ### Generating an SSH key
 
@@ -156,8 +162,10 @@ ssh someguy-bsd
 ```
 
 When connecting you'll be prompted to enter your Trezor PIN and (if set up) your passphrase:
-![Trezor Logo](static/images/Bildschirmfoto 2024-09-28 um 12.59.54.png)
-![Trezor Logo](static/images/trezor_pin_input.png)![Trezor Logo](static/images/trezor_user_data.png)![Trezor Logo](static/images/trezor_confirm.png)
+![Trezor Logo](static/images/Bildschirmfoto%202024-09-28%20um%2012.59.54.png)
+<img src="static/images/trezor_pin_input.png" width="300" />
+<img src="static/images/trezor_user_data.png" width="300" />
+<img src="static/images/trezor_confirm.png" width="300" />
 ![Trezor Logo](static/images/Bildschirmfoto%202024-09-28%20um%2013.07.58.png)
 
 
