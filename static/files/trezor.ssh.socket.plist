@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!-- Originally found at https://gist.github.com/rryter/f5f439fd67ea049cad3a9e64bbc98269#file-trezor-ssh-socket-plist -->
+<plist version="1.0">
+<dict>
+        <key>KeepAlive</key>
+        <true/>
+        <key>Label</key>
+        <string>Trezor SSH Socket</string>
+        <key>ProgramArguments</key>
+        <array>
+                <string>sh</string>
+                <string>-c</string>
+                <string>ln -s -f $SSH_TREZOR_SOCK ~/.ssh/trezor-agent/S.ssh &amp;&amp; /usr/local/bin/trezor-agent --foreground --sock-path $SSH_TREZOR_SOCK ~/.ssh/trezor.conf 2&gt; ~/.ssh/trezor-agent/error.log</string>
+        </array>
+        <key>RunAtLoad</key>
+        <true/>
+        <key>Sockets</key>
+        <dict>
+                <key>ssh</key>
+                <array>
+                        <dict>
+                                <key>SecureSocketWithKey</key>
+                                <string>SSH_TREZOR_SOCK</string>
+                                <key>SockFamily</key>
+                                <string>Unix</string>
+                                <key>SockPathMode</key>
+                                <integer>384</integer>
+                        </dict>
+                </array>
+        </dict>
+        <key>ThrottleInterval</key>
+        <integer>0</integer>
+</dict>
+</plist>

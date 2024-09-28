@@ -1,0 +1,25 @@
+
+The release files have been signed with the OpenPGP key of Tormod Volden
+and can be verified against the public key ID:
+C68187379B23DE9EFC46651E2C80FF56C6830A0E.
+Its fingerprint is:
+C681 8737 9B23 DE9E FC46  651E 2C80 FF56 C683 0A0E
+
+The key is included in the file KEYS from <https://github.com/libusb/libusb/blob/master/KEYS>
+
+Add the release manager keys with:
+	gpg --import KEYS
+
+After import, it can be checked against multiple key servers:
+
+	gpg --keyserver hkp://keys.gnupg.net --recv-keys C68187379B23DE9EFC46651E2C80FF56C6830A0E 
+	gpg --keyserver keyserver.ubuntu.com --recv-keys C68187379B23DE9EFC46651E2C80FF56C6830A0E 
+
+The release files can then be verified with e.g.
+	gpg --verify libusb-1.0.27.tar.bz2.asc
+
+This note should be found and be identical both at
+https://sourceforge.net/projects/libusb/files/libusb-1.0/libusb-1.0.27/
+and
+https://github.com/libusb/libusb/releases/tag/v1.0.27
+
